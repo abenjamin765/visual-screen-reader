@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visual Screen Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="checkbox" name="sr-toggle" id="srToggle"><label for="srToggle" role="switch" onclick="startReader()">Screen reader</label>
+    <div id="wrapper">
+        <a class="button" role="link" href="http://google.com" target="_blank">Link to Google</a>
+        <a class="button" role="link" href="http://google.com" target="_blank">Another link to Google</a>
+        <a class="button" role="link" href="http://google.com" target="_blank">Yet, another link to Google</a>
+        <a class="button" role="link" href="http://google.com" target="_blank">Again, a link to Google</a>
+        
+    </div>
+    <script>
+        function startReader() {
+            var firstElement = document.getElementById("wrapper").firstChild;
+            console.log(firstElement);
+            // firstElement.focus();
+        }
+    
+    </script>
+</body>
+</html>

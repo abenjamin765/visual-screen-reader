@@ -1,0 +1,77 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    margin-top: 50px;
+    padding: 50px;
+}
+.button{
+    background: blue;
+    padding: 0.5em 1em;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+#srToggle{display: none;}
+#srToggle + label{
+    background: yellow;
+    z-index: 2;
+    padding: 1em;
+    display: flex;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;   
+    position: fixed; 
+}
+#srToggle + label:after{
+    content: 'Off';
+}
+#srToggle:checked + label:after{
+    content: 'On';
+}
+#srToggle + label:hover{
+    background: orange;
+    cursor: pointer;
+}
+#srToggle + label:active{
+    background: black;
+    color: white;
+}
+#srToggle:checked ~ #wrapper *:focus{
+    background: black;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#srToggle:checked ~ #wrapper *:focus:after,#srToggle:checked ~ #wrapper *:focus:before{
+    position: fixed;
+    bottom: 50px;
+    font-size: 1rem;
+    border: solid 1px white;
+    padding: 0.5rem 1rem;
+    opacity: 0.5;
+}
+
+#srToggle:checked ~ #wrapper *:focus:after{
+    content: 'Press tab to move forward';
+    right: 50px;
+}
+#srToggle:checked ~ #wrapper *:focus:before{
+    content: 'Press shift+tab to move back';
+    left: 50px;
+}
