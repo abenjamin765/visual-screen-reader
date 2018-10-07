@@ -9,21 +9,12 @@
 </head>
 
 <body>
-    <input type="checkbox" name="sr-toggle" id="srToggle"><label for="srToggle" role="switch" onclick="startReader()">Screen reader</label>
-    <div id="wrapper">
-        <a class="button" role="link" href="http://google.com" target="_blank">Link to Google</a>
-        <a class="button" role="link" href="http://google.com" target="_blank">Another link to Google</a>
-        <a class="button" role="link" href="http://google.com" target="_blank">Yet, another link to Google</a>
-        <a class="button" role="link" href="http://google.com" target="_blank">Again, a link to Google</a>
-        
-    </div>
-    <script>
-        function startReader() {
-            var firstElement = document.getElementById("wrapper").firstChild;
-            console.log(firstElement);
-            // firstElement.focus();
-        }
-    
-    </script>
+<a class="button" href="#" role="button" onclick="alert('You did a thing!')">Do a thing</a>
+<a class="button" href="#" role="button" onclick="alert('You did a thing!')">Do a different thing</a>
+<a class="button" href="#" role="button" onclick="alert('You did a thing!')">Do another thing</a>
+<a class="button" href="#" role="button" onclick="alert('You did a thing!')">Do this other thing</a>
+
+
+<script src="visual-screen-reader.js"></script>
 </body>
 </html>

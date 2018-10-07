@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
 }
-#wrapper{
+#vsr-wrapper{
     margin-top: 50px;
     padding: 50px;
 }
@@ -15,6 +15,11 @@ body{
     text-decoration: none;
     border-radius: 3px;
 }
+.button:hover{
+    cursor: pointer;
+    background-color: cadetblue;
+}
+
 
 #srToggle{display: none;}
 #srToggle + label{
@@ -43,7 +48,7 @@ body{
     background: black;
     color: white;
 }
-#srToggle:checked ~ #wrapper *:focus{
+#srToggle:checked ~ #vsr-wrapper *:focus{
     background: black;
     position: fixed;
     height: 100%;
@@ -58,7 +63,7 @@ body{
     font-size: 2rem;
 }
 
-#srToggle:checked ~ #wrapper *:focus:after,#srToggle:checked ~ #wrapper *:focus:before{
+#srToggle:checked ~ #vsr-wrapper *:focus:after,#srToggle:checked ~ #vsr-wrapper *:focus:before{
     position: fixed;
     bottom: 50px;
     font-size: 1rem;
@@ -67,11 +72,11 @@ body{
     opacity: 0.5;
 }
 
-#srToggle:checked ~ #wrapper *:focus:after{
+#srToggle:checked ~ #vsr-wrapper *:focus:after{
     content: 'Press tab to move forward';
     right: 50px;
 }
-#srToggle:checked ~ #wrapper *:focus:before{
+#srToggle:checked ~ #vsr-wrapper *:focus:before{
     content: 'Press shift+tab to move back';
     left: 50px;
 }
